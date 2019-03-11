@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="styles/iconfont.css">
+</head>
+<body>
+		<div class="main-bottom-right-lb">
+			<div class="cslb-bg">
+				<div class="cslb-top">
+					<span class="acc">今天疯抢</span>
+					<span>限量版</span>
+				</div>
+				<div class="cslb-bottom">
+					<img src="images/27.jpg" alt="">
+					<div class="cslb-bottom-a">
+						<img src="images/12.png" alt="">
+						<span>限时限量疯抢</span>
+						<span>一元超值疯抢中</span>
+					</div>
+				</div>
+				<div class="cslb-bottom" style="display: none;">
+					<img src="images/28.jpg" alt="">
+					<div class="cslb-bottom-a">
+						<img src="images/12.png" alt="">
+						<span>心相印卷纸</span>
+						<span>限时抢单件</span>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+
+<script>
+	var oASC=document.getElementsByClassName('cslb-top')[0];
+	var oSPAN=oASC.getElementsByTagName('span');
+	var oCSL=document.getElementsByClassName('cslb-bottom');
+	var yjj=true;
+	console.log()
+	// setInterval("crm()",2000);
+	// function crm(){
+	// 	if(yjj){
+	// 		oSPAN[1].className="acc";
+	// 		oSPAN[0].className="";
+	// 		oCSL[1].style.display="block";
+	// 		oCSL[0].style.display="none";
+	// 		yjj=false;
+	// 	}else{
+	// 		oSPAN[0].className="acc";
+	// 		oSPAN[1].className="";
+	// 		oCSL[0].style.display="block";
+	// 		oCSL[1].style.display="none";
+	// 		yjj=true;
+	// 	}
+	// }
+	oSPAN[0].onclick=function(){
+		console.log('a');
+		oSPAN[0].className="acc";
+		oSPAN[1].className="";
+		oCSL[0].style.display="block";
+		oCSL[1].style.display="none";
+		
+	}
+	oSPAN[1].onclick=function(){
+		console.log('aaa');
+		oSPAN[1].className="acc";
+		oSPAN[0].className="";
+		oCSL[1].style.display="block";
+		oCSL[0].style.display="none";
+		
+	}
+</script>
+</html>

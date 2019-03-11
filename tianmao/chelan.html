@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			width: 100%;
+			height: 1500px;
+		}
+		.cl{
+			position: fixed;
+			right: 0;
+			top: 0;
+			width: 35px;
+			height: 100%;
+			background: #000;
+		}
+		.cl-logo-bg{
+			position: absolute;
+			right: 0;
+			top:176px;
+		}
+		.cl-logo{
+			width: 35px;
+			height: 35px;
+			background: url(images/20.png);
+		}
+		.cl-bg:hover{
+			background: rgb(255,0,54);
+		}
+		.cl-bg:hover>span{
+			opacity: 1;
+			right: 35px;
+			transition: all 0.5s;
+		}
+		.cl-bg span{
+			display: none;
+			position: absolute;
+			right: 70px;
+			top: 0;
+			display: inline-block;
+			width: 105px;
+			height: 35px;
+			text-align: center;
+			line-height: 35px;
+			background: #333;
+			color: #fff;
+			font-size: 12px;
+			opacity: 0;
+		}
+		.cl-gwc-bg{
+			position: absolute;
+			right: 0;
+			top:215px;
+		}
+		.cl-gwc{
+			border-top: 1px solid #333;
+			border-bottom: 1px solid #333;
+			width: 35px;
+			height: 86px;
+			background: url(images/22.png) no-repeat;
+			padding: 6px 0;
+			color: #fff;
+			font-size: 12px;
+		}
+		.cl-gwc span{
+			position: absolute;
+			right: 6px;
+			top: 35px;
+			width: 20px;
+		}
+		.cl-gwc-bg:hover{
+			background: rgb(255,0,54);
+		}
+		.cl-gwc-bg:hover .cl-gwc{
+			background: url(images/23.png) no-repeat;
+		}
+		
+		.cl-zc-bg{
+			position: absolute;
+			right: 0;
+			top:320px;
+		}
+		.cl-zc{
+			width: 35px;
+			height: 35px;
+			background: url(images/24.png);
+		}
+		.cl-sc-bg{
+			position: absolute;
+			right: 0;
+			top:360px;
+		}
+		.cl-sc{
+			width: 35px;
+			height: 35px;
+			background: url(images/25.png);
+		}
+		.cl-kg-bg{
+			position: absolute;
+			right: 0;
+			top:400px;
+		}
+		.cl-kg{
+			width: 35px;
+			height: 35px;
+			background: url(images/26.png);
+		}
+		.cl-cz-bg{
+			position: absolute;
+			right: 0;
+			top:440px;
+		}
+		.cl-cz{
+			width: 35px;
+			height: 35px;
+			background: url(images/27.png);
+		}
+
+		/*.cl-cl-bg{
+			position: absolute;
+			right: 0;
+			top:480px;
+		}
+		.cl-cl{
+			width: 35px;
+			height: 35px;
+			background: url(images/27.png);
+		}*/
+
+		.cl-fk-bg{
+			position: absolute;
+			right: 0;
+			bottom:70px;
+		}
+		.cl-fk{
+			width: 35px;
+			height: 35px;
+			background: url(images/31.png);
+		}
+		.cl-db-bg{
+			display: none;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+		.cl-db{
+			width: 35px;
+			height: 35px;
+			background: url(images/21.png);
+		}
+		.cl-bm-bg{
+			position: absolute;
+			right: 0;
+			bottom: 35px;
+		}
+		.cl-bm{
+			width: 35px;
+			height: 35px;
+			background: url(images/28.png);
+		}
+
+		.cl-bm-logo{
+			display: none;
+			position: absolute;
+			right: 35px;
+			bottom: -10px;
+			width: 155px;
+    		height: 207px;
+    		background: url(images/29.png) no-repeat;
+		}
+		.cl-bm-logo img:nth-of-type(1){
+			margin-left: 25px;
+			margin-top: 44px;
+			width: 100px;
+		}
+		.cl-bm-logo img:nth-of-type(2){
+			margin-left: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="cl">
+		<div class="cl-bg cl-logo-bg">
+			<div class="cl-logo"></div>
+			<span>会员权益</span>
+		</div>
+
+		<div class="cl-gwc-bg">
+			<div class="cl-gwc"><span>购物车</span></div>
+		</div>
+		
+		<div class="cl-bg cl-zc-bg">
+			<div class="cl-zc"></div>
+			<span>我的资产</span>
+		</div>
+
+		<div class="cl-bg cl-sc-bg">
+			<div class="cl-sc"></div>
+			<span>我的收藏</span>
+		</div>
+
+		<div class="cl-bg cl-kg-bg">
+			<div class="cl-kg"></div>
+			<span>我看过的</span>
+		</div>
+
+		<div class="cl-bg cl-cz-bg">
+			<div class="cl-cz"></div>
+			<span>我要充值</span>
+		</div>
+
+		<div class="cl-bg cl-fk-bg">
+			<div class="cl-fk"></div>
+			<span>用户反馈</span>
+		</div>
+
+		<div class="cl-bg cl-bm-bg">
+			<div class="cl-bm"></div>
+			<div class="cl-bm-logo">
+				<img src="images/48.jpg" alt="">
+				<img src="images/30.png" alt="">
+			</div>
+		</div>
+
+		<div class="cl-bg cl-db-bg">
+			<div class="cl-db"></div>
+			<span>回到顶部</span>
+		</div>
+	</div>
+</body>
+<script>
+// 菜单栏
+// var oCl=document.getElementsByClassName('cl')[0];
+var oCl=document.getElementsByClassName('cl')[0];
+var oBm=document.getElementsByClassName('cl-bm-bg')[0];
+var aBm=document.getElementsByClassName('cl-bm-logo')[0];
+var oDb=document.getElementsByClassName('cl-db-bg')[0];
+var oB=1;
+oBm.onmouseover=function(){
+	if (oB==1){
+		aBm.style.display="block";
+	}	
+}
+oBm.onmouseout=function(){
+	if(oB==1){
+		aBm.style.display="block";
+		oB=2
+	}
+	else{
+		aBm.style.display="none";
+		oB=1;
+	}
+}
+function ni(){
+	if(document.documentElement.scrollTop>5){
+		oDb.style.display="block";
+	}else{
+		oDb.style.display="none";
+	}
+
+}
+document.onmousewheel=function(){ni();}
+oDb.onclick=function(){
+	document.documentElement.scrollTop=oCl.offsetTop;
+	ni();
+}
+
+</script>
+</html>

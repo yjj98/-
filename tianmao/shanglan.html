@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles/iconfont.css">
+	<style>
+		body{
+			width: 100%;
+			height: 2500px;
+		}
+		.sl{
+			display: none;
+			z-index: 100;
+			position: fixed;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			width: 100%;
+			height: 50px;
+			background: rgb(255,0,54);
+		}
+		.sl-bg{
+			overflow: hidden;
+			width: 1230px;
+			/*height: 50px;*/
+			margin: 0 auto;
+		}
+		.sl-inp{
+			overflow: hidden;
+			width: 750px;
+			margin: 8px auto;
+		}
+		.sl input{
+			float: left;
+			width: 640px;
+			height: 20px;
+			line-height: 20px;
+   			padding: 5px 3px 5px 5px;
+		}
+		.sl button{
+			float: left;
+			height: 34px;
+			width: 90px;
+		    border: 0;
+		    font-size: 16px;
+		    color: #fff;
+    		background: rgb(255,0,54);
+		}
+		.sl span{
+			float: left;
+		}
+		.sl span i{
+			color: #fff;
+			line-height: 50px;
+			float: left;
+			font-size: 18px;
+		}
+		.sl span i:nth-of-type(2){
+			font-size: 24px;
+		}
+	</style>
+</head>
+<body>
+	<div class="sl">
+	 	<div class="sl-bg">
+			<span><i class="iconfont icon-tmall"></i><i class="iconfont icon-tianmao-copy"></i></span>
+			<div class="sl-inp">
+				<input type="text" value="搜索 天猫 商品/品牌/店铺">
+				<button>搜索</button>
+			</div>
+	 	</div>
+	</div>
+</body>
+<script>
+var oSL=document.getElementsByClassName('sl')[0];
+document.onscroll=function(){lhm();}
+function lhm(){
+	if(document.documentElement.scrollTop>900)
+	{
+		oSL.style.display="block";
+	}
+	else{
+		oSL.style.display="none";
+	}
+}
+</script>
+</html>

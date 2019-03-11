@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles/iconfont.css">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			width: 100%;
+			height: 1500px;
+		}
+		.dh{
+			display: none;
+			position: fixed;
+			bottom: 50px;
+			left: 100px;
+			width: 36px;
+		}
+		.dh a{
+			overflow: hidden;
+			text-align: center;
+			display:block;
+			width: 0px;
+			height: 0px;
+			margin-top: 2px;
+			background: #666;
+			color: #fff;
+			font-size: 12px;
+			transition: all 0.5s;
+		}
+		.dh span{
+			display: inline-block;
+		    line-height: 12px;
+		    width: 24px;
+		    height: 28px;
+		    margin: 6px auto;
+		}
+		.dh a i{
+			width: 24px;
+			height: 12px;
+			line-height: 12px;
+			font-size: 14px;
+		}
+		.dh a:nth-of-type(1){
+			line-height: 36px;
+			background: rgb(255,0,54);
+		}
+		.dh .dh-bg{
+			background: #0ff;
+		}
+	</style>
+</head>
+<body>
+	<div class="dh">
+		<a href=""><span>导航</span></a>
+		<a href="" class="dh-bg"><span>天猫超市</span></a>
+		<a href=""><span>天猫国际</span></a>
+		<a href=""><span>美丽人生</span></a>
+		<a href=""><span>潮电酷玩</span></a>
+		<a href=""><span>居家生活</span></a>
+		<a href=""><span>打造爱巢</span></a>
+		<a href=""><span>户外出行</span></a>
+		<a href=""><span>猜你喜欢</span></a>
+		<a href=""><span><i class="iconfont icon-shouqi"></i>顶部</span></a>
+	</div>
+</body>
+<script>
+	var oDh=document.getElementsByClassName('dh')[0];
+	var oA=document.getElementsByTagName('a');
+	var a=0;
+	var Timer;
+	function ni(){
+		if(document.documentElement.scrollTop>100){
+			oDh.style.display="block";
+			Timer=setInterval("hao()",50)
+			
+		}else{
+			oDh.style.display="none";
+			a=0;
+			for(var i=0;i<oA.length;i++)
+			{
+				oA[i].style.height=0+"px";
+				oA[i].style.width=0+"px";
+			}
+		}
+	}
+	function hao(){
+		a++;
+		if (a>36) {
+			clearInterval(Timer);
+			a=36;
+		}
+		for(var i=0;i<oA.length;i++)
+		{
+			oA[i].style.height=a+"px";
+			oA[i].style.width=a+"px";
+		}
+	}
+	window.onscroll=function(){ni(); console.log(a);}
+</script>
+</html>
